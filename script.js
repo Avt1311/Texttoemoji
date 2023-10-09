@@ -12,13 +12,13 @@ function encryption() {
         // get the password
 
         var pass = document.getElementById("password").value;
-        console.log(pass)
+        
 
 
         // get the input
 
         var input = document.getElementById("textmsg").value;
-        console.log(input)
+        
 
         //converting it into a set of emojis
 
@@ -40,7 +40,7 @@ function encryption() {
         var dataarr = [];
         if(JSON.parse(localStorage.getItem('data1'))){
             dataarr = JSON.parse(localStorage.getItem('data1'));
-            console.log(dataarr)
+        
             dataarr.push({"pass":pass, "input":input, "clutter":clutter})
         }else{
             dataarr = [{"pass":pass,"input":input,"clutter":clutter}]
@@ -67,11 +67,11 @@ function decryption() {
         for(let i of user){
             if(i.clutter == clutter2){
                 found = i;
-                console.log(i)
+                
             }
         }
         if (found.clutter === clutter2) {
-            console.log("jay ho")
+           
             document.querySelector("#result").style.display = `block`
             document.querySelector("#result").style.color = `#eee`
 
